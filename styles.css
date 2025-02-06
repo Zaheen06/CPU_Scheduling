@@ -1,0 +1,206 @@
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+form select, form input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  flex: 1 1 200px;
+}
+
+form select {
+  background: #fff;
+  cursor: pointer;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  width: auto;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #007bff;
+  color: white;
+}
+
+/* Gantt Chart */
+#ganttChart {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#ganttChart h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Gantt Chart Grid */
+#chart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#chart div {
+  padding: 8px 10px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 40px;
+  transition: background-color 0.3s;
+}
+
+#chart div:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+
+  .container {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  form {
+    gap: 8px;
+  }
+
+  form select, form input {
+    padding: 8px;
+    font-size: 14px;
+    flex: 1 1 100%;
+  }
+
+  form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 80px;
+    max-width: 150px;
+  }
+
+  table th, table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #ganttChart h2 {
+    font-size: 18px;
+  }
+
+  #chart div {
+    padding: 6px 8px;
+    font-size: 14px;
+    min-width: 35px;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  form button {
+    min-width: 70px;
+    padding: 8px 12px;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 13px;
+  }
+}

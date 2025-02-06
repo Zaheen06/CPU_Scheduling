@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPU Scheduling Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>CPU Scheduling Visualizer</h1>
+    <form id="processForm">
+      <label for="algorithm">Select Algorithm:</label>
+      <select id="algorithm">
+        <option value="fcfs">FCFS (Non-Preemptive)</option>
+        <option value="fcfs-preemptive">FCFS (Preemptive)</option>
+        <option value="sjf">SJF (Non-Preemptive)</option>
+        <option value="srtf">SRTF (Preemptive SJF)</option>
+        <option value="rr">Round Robin</option>
+      </select>
+      <input type="number" id="quantum" placeholder="Time Quantum (for RR)" style="display: none;" min="1" />
+      <button type="button" id="addProcess">Add Process</button>
+      <button type="button" id="calculate">Calculate</button>
+      <button type="button" id="reset">Reset</button>
+    </form>
+
+    <table id="processTable">
+      <thead>
+        <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+          <th id="priorityHeader" style="display: none;">Priority</th>
+          <th>Turnaround Time (TAT)</th>
+          <th>Waiting Time (WT)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="averages">
+      <p>Average Turnaround Time (TAT): <span id="avgTAT">0</span></p>
+      <p>Average Waiting Time (WT): <span id="avgWT">0</span></p>
+    </div>
+
+    <div id="ganttChart">
+      <h2>Gantt Chart</h2>
+      <div id="chart"></div>
+      <div id="timeLabels"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+    
+</body>
+</html>
